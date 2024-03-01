@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MapSimple</string>
+
+    <!-- Other strings -->
+    <string-array name="start_locations_array">
+        <item>Main Entrance</item>
+        <item>Meeting Room 1</item>
+        <item>Meeting Room 2</item>
+        <item>Office 1</item>
+        <item>Office 2</item>
+        <item>Rest Room 1</item>
+        <item>Rest Room 2</item>
+        <!-- Add more locations as needed -->
+    </string-array>
+    <string-array name="end_locations_array">
+        <item>Main Entrance</item>
+        <item>Meeting Room 1</item>
+        <item>Meeting Room 2</item>
+        <item>Office 1</item>
+        <item>Office 2</item>
+        <item>Rest Room 1</item>
+        <item>Rest Room 2</item>
+        <!-- Add more locations as needed -->
+    </string-array>
+</resources>
