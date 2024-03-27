@@ -9,6 +9,7 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
+import android.graphics.PointF;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -40,10 +41,10 @@ public class FloorplanView extends View {
     }
 
     private void init(AttributeSet attrs, int defStyle) {
-        // Initialize your drawing objects here
+        // Initialize drawing objects
         paint = new Paint();
-        paint.setColor(Color.RED); // Example path color
-        paint.setStrokeWidth(10); // Example stroke width
+        paint.setColor(Color.RED); //  path color
+        paint.setStrokeWidth(10); //  stroke width
         paint.setStyle(Paint.Style.STROKE);
 
         // Load the floorplan image
@@ -51,7 +52,7 @@ public class FloorplanView extends View {
         matrix = new Matrix();
 
 
-        // Initialize your path here
+        // Initialize path
         path = new Path();
     }
 
@@ -71,9 +72,9 @@ public class FloorplanView extends View {
         }
 
         // Draw the path over the floorplan
-        // Adjust your path drawing code as necessary
-        path.moveTo(300, 300); // Adjust this point according to the scaled image
-        path.lineTo(200, 200); // Adjust this point according to the scaled image
+        // Adjust path drawing code as necessary
+//        path.moveTo(300, 300); // Adjust this point according to the scaled image
+//        path.lineTo(200, 200); // Adjust this point according to the scaled image
         canvas.drawPath(path, paint);
     }
 
@@ -84,7 +85,7 @@ public class FloorplanView extends View {
         invalidate();
     }
 
-    public void drawPath(List<Point> pathCoordinates) {
+    public void drawPath(List<PointF> pathCoordinates) {
         if (pathCoordinates == null || pathCoordinates.isEmpty()) {
             return;
         }
@@ -92,7 +93,7 @@ public class FloorplanView extends View {
         clearPaths(); // Clear existing paths first
 
         boolean firstPoint = true;
-        for (Point point : pathCoordinates) {
+        for (PointF point : pathCoordinates) {
             if (firstPoint) {
                 path.moveTo(point.x, point.y);
                 firstPoint = false;

@@ -2,7 +2,22 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="AdminActivityTest">
+        <State />
+      </entry>
+      <entry key="MainActivityTest">
+        <State />
+      </entry>
       <entry key="app">
+        <State />
+      </entry>
+      <entry key="endLocationSpinner_displaysOptions()">
+        <State />
+      </entry>
+      <entry key="savePathButton_savesPath()">
+        <State />
+      </entry>
+      <entry key="testPathDeletion_viaLongPress()">
         <State />
       </entry>
     </value>

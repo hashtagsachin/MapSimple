@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "593120987018",
+    "project_id": "path-coordinates",
+    "storage_bucket": "path-coordinates.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593120987018:android:f3a7a52815082dd2532a73",
+        "android_client_info": {
+          "package_name": "com.android.example.mapsimple"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEym4f0LCW_wnIj3tLeRrKBc0viNMFajI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

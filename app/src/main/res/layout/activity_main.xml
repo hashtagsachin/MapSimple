@@ -1,46 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- FloorplanView fills the parent but leaves space for the control layout at the bottom -->
-    <com.android.example.mapsimple.FloorplanView
-        android:id="@+id/floorplanView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/controlLayout"/>
-
-    <!-- Control Layout with Spinners and Button, aligned to the bottom -->
+    <!-- The main content view -->
     <RelativeLayout
-        android:id="@+id/controlLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:padding="16dp">
+        android:layout_height="match_parent">
 
-        <Spinner
-            android:id="@+id/startSpinner"
+        <!-- FloorplanView fills the parent but leaves space for the control layout at the bottom -->
+        <com.android.example.mapsimple.FloorplanView
+            android:id="@+id/floorplanView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent" />
 
-        <Spinner
-            android:id="@+id/endSpinner"
+        <!-- Control Layout with Spinners and Button, aligned to the bottom -->
+        <RelativeLayout
+            android:id="@+id/controlLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/startSpinner"
-            android:layout_marginTop="10dp"/>
+            android:layout_alignParentBottom="true"
+            android:padding="16dp">
 
-        <Button
-            android:id="@+id/navigateButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/endSpinner"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:text="Navigate"/>
+            <Spinner
+                android:id="@+id/startSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/endSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/startSpinner"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/navigateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/endSpinner"
+                android:layout_marginTop="17dp"
+                android:text="Navigate" />
+        </RelativeLayout>
     </RelativeLayout>
 
-</RelativeLayout>
+    <!-- NavigationView for the Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
